@@ -6,11 +6,10 @@ phases:
       nodejs: 10
   build:
     commands:
-      - echo "Package & Dependicies are getting installed"
-      - npm -f install
+      - echo "Package & Dependencies are getting installed"
+      - npm install
       - echo "Packages have been installed"
       - echo "Storing Build Artifact to the Location"
 artifacts:
-  type: zip
-  paths:
-    - '*'
+  files:
+    - '**/*'
