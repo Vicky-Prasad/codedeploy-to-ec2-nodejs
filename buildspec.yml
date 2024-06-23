@@ -4,11 +4,11 @@ phases:
   install:
     commands:
       - echo "Updating server"
-      - sudo apt-get -y update
+      - sudo apt -y update
       - echo "Installing Node.js"
-      - sudo apt install nodejs -y
-      - sudo apt install npm -y
-      - sudo npm install pm2@latest -g
+      - apt install nodejs -y
+      - apt install npm -y
+      - npm install pm2@latest -g
       - echo "Node.js and npm have been installed"
       - node -v
       - npm -v
