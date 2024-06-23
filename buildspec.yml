@@ -3,9 +3,12 @@ version: 0.2
 phases:
   install:
     commands:
+      - echo "Updating server"
+      - sudo apt-get -y update
       - echo "Installing Node.js"
-      - curl -sL https://deb.nodesource.com/setup_10.x | bash -
-      - apt-get install -y nodejs
+      - sudo apt install nodejs -y
+      - sudo apt install npm -y
+      - sudo npm install pm2@latest -g
       - echo "Node.js and npm have been installed"
       - node -v
       - npm -v
