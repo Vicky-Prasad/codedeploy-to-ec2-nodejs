@@ -1,9 +1,14 @@
 version: 0.2
 
 phases:
-  install: 
-    runtime-versions:
-      nodejs: 10
+  install:
+    commands:
+      - echo "Installing Node.js"
+      - curl -sL https://deb.nodesource.com/setup_10.x | bash -
+      - apt-get install -y nodejs
+      - echo "Node.js and npm have been installed"
+      - node -v
+      - npm -v
   build:
     commands:
       - echo "Package & Dependencies are getting installed"
